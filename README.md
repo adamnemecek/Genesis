@@ -20,4 +20,5 @@ The main objective of this program is to design a very clean and natual UI for a
 - Drawing of pencil samples
 - Mastering space coordinate
 - use the Pencil position/pressure
-- use Maetal for the rendering
+- use Metal for the rendering
+

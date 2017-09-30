@@ -8,11 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BoardViewController: UIViewController {
+
+  lazy var container = {return (UIApplication.shared.delegate as? BoardAppDelegate)?.boardContainer}()
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    if let model = container?.managedObjectModel {
+      // here extract some features
+      NSLog("managed object: %@", model)
+    }
   }
 
   override func didReceiveMemoryWarning() {
