@@ -17,6 +17,8 @@
 		D5A2EEF11F5370170052784E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5A2EEEF1F5370170052784E /* LaunchScreen.storyboard */; };
 		D5A2EEFC1F5370180052784E /* GenesisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEFB1F5370180052784E /* GenesisTests.swift */; };
 		D5A2EF071F5370180052784E /* GenesisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EF061F5370180052784E /* GenesisUITests.swift */; };
+		D5B48AB71F80EF46009652BA /* BoardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B48AB61F80EF46009652BA /* BoardPageView.swift */; };
+		D5B48AB91F811548009652BA /* GIGPUPrograms.metal in Sources */ = {isa = PBXBuildFile; fileRef = D5B48AB81F811548009652BA /* GIGPUPrograms.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		D5A2EF021F5370180052784E /* GenesisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A2EF061F5370180052784E /* GenesisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisUITests.swift; sourceTree = "<group>"; };
 		D5A2EF081F5370180052784E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5B48AB61F80EF46009652BA /* BoardPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPageView.swift; sourceTree = "<group>"; };
+		D5B48AB81F811548009652BA /* GIGPUPrograms.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = GIGPUPrograms.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +114,10 @@
 				D5A2EEEF1F5370170052784E /* LaunchScreen.storyboard */,
 				D5A2EEF21F5370170052784E /* Info.plist */,
 				D5A2EEEA1F5370170052784E /* Genesis.xcdatamodeld */,
-				41548E941F7D660B00E3F92B /* BoardView.swift */,
 				41548E961F7D772100E3F92B /* BoardContainer.swift */,
+				41548E941F7D660B00E3F92B /* BoardView.swift */,
+				D5B48AB61F80EF46009652BA /* BoardPageView.swift */,
+				D5B48AB81F811548009652BA /* GIGPUPrograms.metal */,
 			);
 			path = Genesis;
 			sourceTree = "<group>";
@@ -268,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B48AB91F811548009652BA /* GIGPUPrograms.metal in Sources */,
 				D5A2EEEC1F5370170052784E /* Genesis.xcdatamodeld in Sources */,
 				41548E971F7D772100E3F92B /* BoardContainer.swift in Sources */,
+				D5B48AB71F80EF46009652BA /* BoardPageView.swift in Sources */,
 				41548E951F7D660B00E3F92B /* BoardView.swift in Sources */,
 				D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */,
 				D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */,
