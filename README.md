@@ -16,7 +16,7 @@ The main objective of this program is to design a very clean and natual UI for a
 
 ### First iteration to discover essential context elements
 
-- Simple A4 page 
+- Simple A4 page
 - Drawing of pencil samples
 - Mastering space coordinate
 - use the Pencil position/pressure

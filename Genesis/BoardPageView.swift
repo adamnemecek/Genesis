@@ -48,16 +48,20 @@ class BoardPageView: MTKView {
   // the struc to pass transformation to the shader
   var uniforms = Uniforms(modelViewProjectionMatrix: matrix_identity_float4x4)
   
+  // overrides
+  
   // MARK: Init Phase
   
   override init(frame frameRect: CGRect, device: MTLDevice?) {
     
-    super.init(frame: frameRect, device: device ?? MTLCreateSystemDefaultDevice())
+    super.init(frame: frameRect, device: device)
+    
+    isOpaque = false
     
     preferredFramesPerSecond = 60
     
-    let value = 1.0
-    clearColor = MTLClearColor(red: value, green: value, blue: value, alpha: 0.5)
+    let value = 0.5
+    clearColor = MTLClearColor(red: value, green: value, blue: value, alpha: 1.0)
     clearDepth = 1.0
     clearStencil = 0
     colorPixelFormat = .bgra8Unorm
