@@ -12,8 +12,10 @@ class BoardViewController: UIViewController {
 
   lazy var container = {return (UIApplication.shared.delegate as? BoardAppDelegate)?.boardContainer}()
   @IBOutlet weak var infoView: UIView!
+  @IBOutlet weak var infoController: UIViewController!
   
   required init?(coder aDecoder: NSCoder) {
+    infoController = BoardInfoViewController(nibName: nil, bundle: nil)
     super.init(coder: aDecoder)
   }
 
@@ -22,9 +24,9 @@ class BoardViewController: UIViewController {
     if let model = container?.managedObjectModel {
       // here extract some features
       NSLog("managed object: %@", model)
-      infoView.alpha = 0
-      view.bringSubview(toFront: infoView)
     }
+    infoView.alpha = 0
+    view.bringSubview(toFront: infoView)
   }
 
   override func didReceiveMemoryWarning() {
@@ -33,10 +35,25 @@ class BoardViewController: UIViewController {
   }
 
   @IBAction func showInfoView(_ sender: UITapGestureRecognizer) {
-    UIViewPropertyAnimator(duration: 1.0, curve: UIViewAnimationCurve.easeIn) {
+    UIViewPropertyAnimator(duration: 0.6, curve: UIViewAnimationCurve.easeIn) {
       self.infoView.alpha = 1 - self.infoView.alpha
     }.startAnimation()
   }
   
+  var originalCenter = CGPoint(x: 0, y: 0)
+  @IBAction func panInfoView(_ gestureRecognizer : UIPanGestureRecognizer) {
+    if let piece = gestureRecognizer.view {
+      switch gestureRecognizer.state {
+      case .began:
+        originalCenter = piece.center
+      case .changed:
+        let translation = gestureRecognizer.translation(in: piece.superview)
+        piece.center = CGPoint(x: originalCenter.x + translation.x,
+                                y: originalCenter.y + translation.y)
+      default:
+        break
+      }
+    }
+  }
+  
 }
-

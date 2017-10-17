@@ -57,11 +57,12 @@ class BoardPageView: MTKView {
     super.init(frame: frameRect, device: device)
     
     isOpaque = false
+    mlLayer.isOpaque = false
     
     preferredFramesPerSecond = 60
     
-    let value = 0.5
-    clearColor = MTLClearColor(red: value, green: value, blue: value, alpha: 1.0)
+    let value = 1.0
+    clearColor = MTLClearColor(red: value, green: value, blue: value, alpha: 1)
     clearDepth = 1.0
     clearStencil = 0
     colorPixelFormat = .bgra8Unorm

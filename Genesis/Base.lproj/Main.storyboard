@@ -18,10 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRa-r9-ozE">
-                                <rect key="frame" x="487" y="52" width="461" height="1241"/>
+                                <rect key="frame" x="492" y="705" width="461" height="597"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.89344871582851482" green="0.96633893032226337" blue="0.97776376305466484" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.87874144315719604" green="0.86539822816848755" blue="0.96459347009658813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jeq-5g-Qlw" appends="YES" id="PV9-Zy-yNV"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xha-uB-KwE" appends="YES" id="kHW-wf-2iN"/>
+                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,13 +40,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTouchesRequired="2" id="0NE-cx-siA">
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="0NE-cx-siA" userLabel="Show global InfoView">
                     <connections>
                         <action selector="showInfoView:" destination="BYZ-38-t0r" id="ZUW-WV-cGj"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="jeq-5g-Qlw" userLabel="Hide Info View">
+                    <connections>
+                        <action selector="showInfoView:" destination="BYZ-38-t0r" id="Q3i-wn-Fht"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Xha-uB-KwE">
+                    <connections>
+                        <action selector="panInfoView:" destination="BYZ-38-t0r" id="o3f-q0-3HW"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="33.984375" y="42.606149341142014"/>
+            <point key="canvasLocation" x="29.882812499999996" y="-67.203513909224"/>
         </scene>
     </scenes>
 </document>

@@ -18,7 +18,7 @@ class BoardView: UIView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     guard device != nil else { return }
-    backgroundColor = UIColor(displayP3Red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+    backgroundColor = UIColor(white: 0.666, alpha: 1.0)
     let pageRect = layoutPage(pos: 0, nbPages: 1)
     let firstPage = BoardPageView(frame: pageRect, device: device)
     pages.append(firstPage)

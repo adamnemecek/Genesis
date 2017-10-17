@@ -21,6 +21,7 @@
 		D5B48AB71F80EF46009652BA /* BoardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B48AB61F80EF46009652BA /* BoardPageView.swift */; };
 		D5B48AB91F811548009652BA /* GIGPUPrograms.metal in Sources */ = {isa = PBXBuildFile; fileRef = D5B48AB81F811548009652BA /* GIGPUPrograms.metal */; };
 		D5E7916F1F93D2A5000D45C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D5E7916E1F93D2A5000D45C3 /* README.md */; };
+		D5F8937A1F9550BF009F2C45 /* BoardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D5B48AB61F80EF46009652BA /* BoardPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPageView.swift; sourceTree = "<group>"; };
 		D5B48AB81F811548009652BA /* GIGPUPrograms.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = GIGPUPrograms.metal; sourceTree = "<group>"; };
 		D5E7916E1F93D2A5000D45C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */,
 				D5A2EEE51F5370170052784E /* BoardViewController.swift */,
+				D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */,
 				D5A2EEE71F5370170052784E /* Main.storyboard */,
 				D5A2EEED1F5370170052784E /* Assets.xcassets */,
 				D5A2EEEF1F5370170052784E /* LaunchScreen.storyboard */,
@@ -290,6 +293,7 @@
 				D5B48AB71F80EF46009652BA /* BoardPageView.swift in Sources */,
 				41548E951F7D660B00E3F92B /* BoardView.swift in Sources */,
 				D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */,
+				D5F8937A1F9550BF009F2C45 /* BoardInfoViewController.swift in Sources */,
 				D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
