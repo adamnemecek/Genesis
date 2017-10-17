@@ -39,21 +39,5 @@ class BoardViewController: UIViewController {
       self.infoView.alpha = 1 - self.infoView.alpha
     }.startAnimation()
   }
-  
-  var originalCenter = CGPoint(x: 0, y: 0)
-  @IBAction func panInfoView(_ gestureRecognizer : UIPanGestureRecognizer) {
-    if let piece = gestureRecognizer.view {
-      switch gestureRecognizer.state {
-      case .began:
-        originalCenter = piece.center
-      case .changed:
-        let translation = gestureRecognizer.translation(in: piece.superview)
-        piece.center = CGPoint(x: originalCenter.x + translation.x,
-                                y: originalCenter.y + translation.y)
-      default:
-        break
-      }
-    }
-  }
-  
+    
 }

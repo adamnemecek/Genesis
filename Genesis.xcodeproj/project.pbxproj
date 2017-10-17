@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41548E951F7D660B00E3F92B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41548E941F7D660B00E3F92B /* BoardView.swift */; };
 		41548E971F7D772100E3F92B /* BoardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41548E961F7D772100E3F92B /* BoardContainer.swift */; };
+		D54A1BA61F96951600A0F9D7 /* ViewMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A1BA51F96951500A0F9D7 /* ViewMover.swift */; };
 		D59839A01F855CC600D212FA /* BoardPageCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598399F1F855CC600D212FA /* BoardPageCamera.swift */; };
 		D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */; };
 		D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEE51F5370170052784E /* BoardViewController.swift */; };
@@ -45,6 +46,7 @@
 		41548E941F7D660B00E3F92B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoardView.swift; path = Viewing/BoardView.swift; sourceTree = "<group>"; };
 		41548E961F7D772100E3F92B /* BoardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoardContainer.swift; path = Model/BoardContainer.swift; sourceTree = "<group>"; };
 		D50ABF5E1F8AB9DF00D957D6 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D54A1BA51F96951500A0F9D7 /* ViewMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMover.swift; sourceTree = "<group>"; };
 		D598399F1F855CC600D212FA /* BoardPageCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPageCamera.swift; sourceTree = "<group>"; };
 		D5A2EEE01F5370170052784E /* Genesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D54A1BA71F9695FB00A0F9D7 /* UITools */ = {
+			isa = PBXGroup;
+			children = (
+				D54A1BA51F96951500A0F9D7 /* ViewMover.swift */,
+			);
+			path = UITools;
+			sourceTree = "<group>";
+		};
 		D5A2EED71F5370170052784E = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		D5A2EEE21F5370170052784E /* Genesis */ = {
 			isa = PBXGroup;
 			children = (
+				D54A1BA71F9695FB00A0F9D7 /* UITools */,
 				D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */,
 				D5A2EEE51F5370170052784E /* BoardViewController.swift */,
 				D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */,
@@ -292,6 +303,7 @@
 				41548E971F7D772100E3F92B /* BoardContainer.swift in Sources */,
 				D5B48AB71F80EF46009652BA /* BoardPageView.swift in Sources */,
 				41548E951F7D660B00E3F92B /* BoardView.swift in Sources */,
+				D54A1BA61F96951600A0F9D7 /* ViewMover.swift in Sources */,
 				D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */,
 				D5F8937A1F9550BF009F2C45 /* BoardInfoViewController.swift in Sources */,
 				D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */,

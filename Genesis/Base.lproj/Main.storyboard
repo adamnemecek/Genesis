@@ -24,7 +24,7 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="jeq-5g-Qlw" appends="YES" id="PV9-Zy-yNV"/>
-                                    <outletCollection property="gestureRecognizers" destination="Xha-uB-KwE" appends="YES" id="kHW-wf-2iN"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xha-uB-KwE" appends="YES" id="eLN-4e-piP"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -40,6 +40,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="eym-ZD-CSU" customClass="ViewMover" customModule="Genesis" customModuleProvider="target"/>
                 <tapGestureRecognizer numberOfTouchesRequired="2" id="0NE-cx-siA" userLabel="Show global InfoView">
                     <connections>
                         <action selector="showInfoView:" destination="BYZ-38-t0r" id="ZUW-WV-cGj"/>
@@ -52,7 +53,7 @@
                 </tapGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Xha-uB-KwE">
                     <connections>
-                        <action selector="panInfoView:" destination="BYZ-38-t0r" id="o3f-q0-3HW"/>
+                        <action selector="panView:" destination="eym-ZD-CSU" id="6RR-Ri-UXH"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
