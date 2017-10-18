@@ -10,7 +10,7 @@ The main objective of this program is to design a very clean and natual UI for a
 - Swift programming
 - Metal based
 - Will experiment use of SceneKit for the 3D UI elements
-- Use ARKit ro allow advanced 3D Scene Note Tacking
+- Use ARKit to allow 3D Scene Note Tacking
 
 ## Functionnal/Technical Specification
 
@@ -21,4 +21,4 @@ The main objective of this program is to design a very clean and natual UI for a
 - Mastering space coordinate
 - use the Pencil position/pressure
 - use Metal for the rendering
-
+- integrate a trace information UI
