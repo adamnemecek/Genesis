@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRa-r9-ozE">
-                                <rect key="frame" x="492" y="705" width="461" height="597"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.87874144315719604" green="0.86539822816848755" blue="0.96459347009658813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-7L-hFS">
+                                <rect key="frame" x="506" y="667" width="442" height="624"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jeq-5g-Qlw" appends="YES" id="PV9-Zy-yNV"/>
-                                    <outletCollection property="gestureRecognizers" destination="Xha-uB-KwE" appends="YES" id="eLN-4e-piP"/>
+                                    <outletCollection property="gestureRecognizers" destination="jeq-5g-Qlw" appends="YES" id="h2k-l8-ohe"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xha-uB-KwE" appends="YES" id="37d-dn-aEL"/>
+                                    <segue destination="mX7-pe-ELm" kind="embed" identifier="infoSegue" id="KAX-0P-1Ed"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -36,7 +36,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="infoView" destination="JRa-r9-ozE" id="Qlh-RM-pLi"/>
+                        <outlet property="infoView" destination="dh4-7L-hFS" id="Ju6-1h-A29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,6 +58,65 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="29.882812499999996" y="-67.203513909224"/>
+        </scene>
+        <!--Board Info View Controller-->
+        <scene sceneID="7Hm-X7-ppv">
+            <objects>
+                <viewController id="mX7-pe-ELm" customClass="BoardInfoViewController" customModule="Genesis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="TFd-NG-d8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="442" height="624"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ht4-Xs-SIr">
+                                <rect key="frame" x="20" y="67" width="402" height="537"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.25430757705479451" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoViewCell" textLabel="dmH-yE-EX4" style="IBUITableViewCellStyleDefault" id="4zD-uQ-GKw">
+                                        <rect key="frame" x="0.0" y="28" width="402" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4zD-uQ-GKw" id="zh5-in-cZi">
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="dmH-yE-EX4">
+                                                    <rect key="frame" x="15" y="0.0" width="372" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mX7-pe-ELm" id="1eI-Wu-L52"/>
+                                    <outlet property="delegate" destination="mX7-pe-ELm" id="XDL-rX-Y2P"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trace &amp; Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHb-sc-Sj7">
+                                <rect key="frame" x="175" y="20" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83895272016525269" green="0.83087998628616333" blue="0.9568137526512146" alpha="0.50235445205479456" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="wGl-CM-7qD"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTable" destination="ht4-Xs-SIr" id="cUm-pn-hXZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmv-5P-z3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.234374999999998" y="484.91947291361635"/>
         </scene>
     </scenes>
 </document>

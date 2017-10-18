@@ -101,6 +101,14 @@
 			path = UITools;
 			sourceTree = "<group>";
 		};
+		D54A1BA81F96969F00A0F9D7 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				D5B48AB81F811548009652BA /* GIGPUPrograms.metal */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
 		D5A2EED71F5370170052784E = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D54A1BA71F9695FB00A0F9D7 /* UITools */,
+				D54A1BA81F96969F00A0F9D7 /* Metal */,
 				D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */,
 				D5A2EEE51F5370170052784E /* BoardViewController.swift */,
 				D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */,
@@ -138,7 +147,6 @@
 				41548E961F7D772100E3F92B /* BoardContainer.swift */,
 				41548E941F7D660B00E3F92B /* BoardView.swift */,
 				D5B48AB61F80EF46009652BA /* BoardPageView.swift */,
-				D5B48AB81F811548009652BA /* GIGPUPrograms.metal */,
 				D598399F1F855CC600D212FA /* BoardPageCamera.swift */,
 			);
 			path = Genesis;

@@ -9,16 +9,16 @@
 import UIKit
 
 class BoardViewController: UIViewController {
-
+  
   lazy var container = {return (UIApplication.shared.delegate as? BoardAppDelegate)?.boardContainer}()
   @IBOutlet weak var infoView: UIView!
-  @IBOutlet weak var infoController: UIViewController!
+  
+  var infoViewController: BoardInfoViewController!
   
   required init?(coder aDecoder: NSCoder) {
-    infoController = BoardInfoViewController(nibName: nil, bundle: nil)
     super.init(coder: aDecoder)
   }
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     if let model = container?.managedObjectModel {
@@ -27,17 +27,22 @@ class BoardViewController: UIViewController {
     }
     infoView.alpha = 0
     view.bringSubview(toFront: infoView)
+    
+    infoViewController = childViewControllers.first {
+      $0.isMember(of: BoardInfoViewController.self)
+      } as! BoardInfoViewController
+    infoViewController.addMessage(msg: "Started")
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
   @IBAction func showInfoView(_ sender: UITapGestureRecognizer) {
     UIViewPropertyAnimator(duration: 0.6, curve: UIViewAnimationCurve.easeIn) {
       self.infoView.alpha = 1 - self.infoView.alpha
-    }.startAnimation()
+      }.startAnimation()
   }
-    
+  
 }
