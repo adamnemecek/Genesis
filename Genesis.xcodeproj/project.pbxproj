@@ -10,6 +10,7 @@
 		41548E951F7D660B00E3F92B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41548E941F7D660B00E3F92B /* BoardView.swift */; };
 		41548E971F7D772100E3F92B /* BoardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41548E961F7D772100E3F92B /* BoardContainer.swift */; };
 		D54A1BA61F96951600A0F9D7 /* ViewMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A1BA51F96951500A0F9D7 /* ViewMover.swift */; };
+		D57E20A81FADFAB700E94A94 /* GeoGridPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E20A71FADFAB700E94A94 /* GeoGridPage.swift */; };
 		D59839A01F855CC600D212FA /* BoardPageCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598399F1F855CC600D212FA /* BoardPageCamera.swift */; };
 		D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */; };
 		D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEE51F5370170052784E /* BoardViewController.swift */; };
@@ -21,6 +22,7 @@
 		D5A2EF071F5370180052784E /* GenesisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EF061F5370180052784E /* GenesisUITests.swift */; };
 		D5B48AB71F80EF46009652BA /* BoardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B48AB61F80EF46009652BA /* BoardPageView.swift */; };
 		D5B48AB91F811548009652BA /* GIGPUPrograms.metal in Sources */ = {isa = PBXBuildFile; fileRef = D5B48AB81F811548009652BA /* GIGPUPrograms.metal */; };
+		D5BB520D1FAF80A500E69C5C /* GeoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB520C1FAF80A500E69C5C /* GeoProtocol.swift */; };
 		D5E7916F1F93D2A5000D45C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D5E7916E1F93D2A5000D45C3 /* README.md */; };
 		D5F8937A1F9550BF009F2C45 /* BoardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,7 @@
 		41548E961F7D772100E3F92B /* BoardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoardContainer.swift; path = Model/BoardContainer.swift; sourceTree = "<group>"; };
 		D50ABF5E1F8AB9DF00D957D6 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D54A1BA51F96951500A0F9D7 /* ViewMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMover.swift; sourceTree = "<group>"; };
+		D57E20A71FADFAB700E94A94 /* GeoGridPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoGridPage.swift; sourceTree = "<group>"; };
 		D598399F1F855CC600D212FA /* BoardPageCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPageCamera.swift; sourceTree = "<group>"; };
 		D5A2EEE01F5370170052784E /* Genesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		D5A2EF081F5370180052784E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5B48AB61F80EF46009652BA /* BoardPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPageView.swift; sourceTree = "<group>"; };
 		D5B48AB81F811548009652BA /* GIGPUPrograms.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = GIGPUPrograms.metal; sourceTree = "<group>"; };
+		D5BB520C1FAF80A500E69C5C /* GeoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoProtocol.swift; sourceTree = "<group>"; };
 		D5E7916E1F93D2A5000D45C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,15 @@
 			path = Metal;
 			sourceTree = "<group>";
 		};
+		D57E20A61FADD85E00E94A94 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				D5BB520C1FAF80A500E69C5C /* GeoProtocol.swift */,
+				D57E20A71FADFAB700E94A94 /* GeoGridPage.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
 		D5A2EED71F5370170052784E = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 			children = (
 				D54A1BA71F9695FB00A0F9D7 /* UITools */,
 				D54A1BA81F96969F00A0F9D7 /* Metal */,
+				D57E20A61FADD85E00E94A94 /* Geometry */,
 				D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */,
 				D5A2EEE51F5370170052784E /* BoardViewController.swift */,
 				D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */,
@@ -233,7 +247,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Gerard Iglesias";
 				TargetAttributes = {
 					D5A2EEDF1F5370170052784E = {
@@ -305,6 +319,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57E20A81FADFAB700E94A94 /* GeoGridPage.swift in Sources */,
+				D5BB520D1FAF80A500E69C5C /* GeoProtocol.swift in Sources */,
 				D5B48AB91F811548009652BA /* GIGPUPrograms.metal in Sources */,
 				D59839A01F855CC600D212FA /* BoardPageCamera.swift in Sources */,
 				D5A2EEEC1F5370170052784E /* Genesis.xcdatamodeld in Sources */,
@@ -383,6 +399,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -390,6 +407,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -440,6 +458,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -447,6 +466,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -471,6 +491,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

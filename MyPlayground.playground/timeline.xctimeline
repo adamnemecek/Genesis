@@ -2,5 +2,10 @@
 <Timeline
    version = "3.0">
    <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/gerard/Developer/Genesis/MyPlayground.playground#CharacterRangeLen=18&amp;CharacterRangeLoc=559&amp;EndingColumnNumber=54&amp;EndingLineNumber=20&amp;StartingColumnNumber=36&amp;StartingLineNumber=20&amp;Timestamp=538152779.522384"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
    </TimelineItems>
 </Timeline>
