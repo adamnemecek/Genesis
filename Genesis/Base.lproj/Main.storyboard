@@ -46,7 +46,7 @@
                         <action selector="showInfoView:" destination="BYZ-38-t0r" id="ZUW-WV-cGj"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="jeq-5g-Qlw" userLabel="Hide Info View">
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="jeq-5g-Qlw" userLabel="Hide Info View">
                     <connections>
                         <action selector="showInfoView:" destination="BYZ-38-t0r" id="Q3i-wn-Fht"/>
                     </connections>

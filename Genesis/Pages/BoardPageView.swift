@@ -24,6 +24,13 @@ struct Uniforms
 
 class BoardPageView: MTKView {
   
+  var pageFormat = A4
+  var showGrid = false {
+    didSet {
+      setNeedsDisplay()
+      NotificationCenter.default.post(name: InfoEventGeneric, object: self, userInfo: ["message":showGrid ? "Show Grid" : "Hide Grid"])
+    }
+  }
   var camera = BoardPageCamera(center: CGPoint(x: 21.0/2.0, y: 29.7/2.0), up: CGVector(dx: 0, dy: 1.0), extend: CGSize(width: 21, height: 29.7))
   
   var mlLayer : CAMetalLayer {
@@ -145,12 +152,18 @@ class BoardPageView: MTKView {
       
       updateViewBuffer()
       
-      commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-      commandEncoder.setVertexBuffer(viewingBuffer, offset: 0, index: 1)
-      commandEncoder.drawPrimitives(type: .line, vertexStart: 0, vertexCount: 4)
+      drawGeometry(commandEncoder)
       commandEncoder.endEncoding()
       commandBuffer.present(drawable)
       commandBuffer.commit()
+    }
+  }
+  
+  fileprivate func drawGeometry(_ commandEncoder: MTLRenderCommandEncoder) {
+    if showGrid {
+      commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+      commandEncoder.setVertexBuffer(viewingBuffer, offset: 0, index: 1)
+      commandEncoder.drawPrimitives(type: .line, vertexStart: 0, vertexCount: 4)
     }
   }
   

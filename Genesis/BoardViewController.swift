@@ -44,5 +44,5 @@ class BoardViewController: UIViewController {
       self.infoView.alpha = 1 - self.infoView.alpha
       }.startAnimation()
   }
-  
+    
 }

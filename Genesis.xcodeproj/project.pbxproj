@@ -13,6 +13,7 @@
 		D57E20A81FADFAB700E94A94 /* GeoGridPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E20A71FADFAB700E94A94 /* GeoGridPage.swift */; };
 		D59839A01F855CC600D212FA /* BoardPageCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598399F1F855CC600D212FA /* BoardPageCamera.swift */; };
 		D5A0DDED204BF71400ACB92B /* PageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A0DDEC204BF71400ACB92B /* PageFormat.swift */; };
+		D5A0DDEF204C578900ACB92B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A0DDEE204C578900ACB92B /* Constants.swift */; };
 		D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */; };
 		D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2EEE51F5370170052784E /* BoardViewController.swift */; };
 		D5A2EEE91F5370170052784E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5A2EEE71F5370170052784E /* Main.storyboard */; };
@@ -46,13 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		41548E941F7D660B00E3F92B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoardView.swift; path = Viewing/BoardView.swift; sourceTree = "<group>"; };
+		41548E941F7D660B00E3F92B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		41548E961F7D772100E3F92B /* BoardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoardContainer.swift; path = Model/BoardContainer.swift; sourceTree = "<group>"; };
 		D50ABF5E1F8AB9DF00D957D6 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D54A1BA51F96951500A0F9D7 /* ViewMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMover.swift; sourceTree = "<group>"; };
 		D57E20A71FADFAB700E94A94 /* GeoGridPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoGridPage.swift; sourceTree = "<group>"; };
 		D598399F1F855CC600D212FA /* BoardPageCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPageCamera.swift; sourceTree = "<group>"; };
 		D5A0DDEC204BF71400ACB92B /* PageFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFormat.swift; sourceTree = "<group>"; };
+		D5A0DDEE204C578900ACB92B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D5A2EEE01F5370170052784E /* Genesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAppDelegate.swift; sourceTree = "<group>"; };
 		D5A2EEE51F5370170052784E /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
@@ -118,11 +120,21 @@
 		D57E20A61FADD85E00E94A94 /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				D598399F1F855CC600D212FA /* BoardPageCamera.swift */,
 				D5BB520C1FAF80A500E69C5C /* GeoProtocol.swift */,
 				D57E20A71FADFAB700E94A94 /* GeoGridPage.swift */,
 				D5A0DDEC204BF71400ACB92B /* PageFormat.swift */,
 			);
 			path = Geometry;
+			sourceTree = "<group>";
+		};
+		D5A0DDF0204C579D00ACB92B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				41548E941F7D660B00E3F92B /* BoardView.swift */,
+				D5B48AB61F80EF46009652BA /* BoardPageView.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		D5A2EED71F5370170052784E = {
@@ -150,9 +162,11 @@
 		D5A2EEE21F5370170052784E /* Genesis */ = {
 			isa = PBXGroup;
 			children = (
+				D5A0DDEE204C578900ACB92B /* Constants.swift */,
 				D54A1BA71F9695FB00A0F9D7 /* UITools */,
 				D54A1BA81F96969F00A0F9D7 /* Metal */,
 				D57E20A61FADD85E00E94A94 /* Geometry */,
+				D5A0DDF0204C579D00ACB92B /* Pages */,
 				D5A2EEE31F5370170052784E /* BoardAppDelegate.swift */,
 				D5A2EEE51F5370170052784E /* BoardViewController.swift */,
 				D5F893791F9550BF009F2C45 /* BoardInfoViewController.swift */,
@@ -162,9 +176,6 @@
 				D5A2EEF21F5370170052784E /* Info.plist */,
 				D5A2EEEA1F5370170052784E /* Genesis.xcdatamodeld */,
 				41548E961F7D772100E3F92B /* BoardContainer.swift */,
-				41548E941F7D660B00E3F92B /* BoardView.swift */,
-				D5B48AB61F80EF46009652BA /* BoardPageView.swift */,
-				D598399F1F855CC600D212FA /* BoardPageCamera.swift */,
 			);
 			path = Genesis;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 				41548E951F7D660B00E3F92B /* BoardView.swift in Sources */,
 				D54A1BA61F96951600A0F9D7 /* ViewMover.swift in Sources */,
 				D5A2EEE61F5370170052784E /* BoardViewController.swift in Sources */,
+				D5A0DDEF204C578900ACB92B /* Constants.swift in Sources */,
 				D5F8937A1F9550BF009F2C45 /* BoardInfoViewController.swift in Sources */,
 				D5A2EEE41F5370170052784E /* BoardAppDelegate.swift in Sources */,
 			);

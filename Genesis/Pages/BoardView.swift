@@ -13,7 +13,6 @@ class BoardView: UIView {
 
   var pages = [BoardPageView]()
   var current = 0
-  var pageFormat = A4
   
   let device = MTLCreateSystemDefaultDevice()
 
@@ -21,8 +20,7 @@ class BoardView: UIView {
     super.init(coder: aDecoder)
     guard device != nil else { return }
     backgroundColor = UIColor(white: 0.666, alpha: 1.0)
-    let pageRect = layoutPage(pos: 0, nbPages: 1)
-    let firstPage = BoardPageView(frame: pageRect, device: device)
+    let firstPage = BoardPageView(frame: CGRect(x: 0, y: 0, width: A4.width, height: A4.height), device: device)
     pages.append(firstPage)
     addSubview(pages[0])
   }
@@ -41,6 +39,7 @@ class BoardView: UIView {
   ///   - pos: position of the pages in the book
   ///   - nbPages: number of pages in the book
   func layoutPage(pos: Int, nbPages: Int) -> CGRect {
+    let pageFormat = pages[pos].pageFormat
     let scale: CGFloat = 1.00
     let safeframe = UIEdgeInsetsInsetRect(bounds, safeAreaInsets)
     func center(width: CGFloat, height: CGFloat) -> CGRect {
@@ -61,6 +60,6 @@ class BoardView: UIView {
   }
 
   @IBAction func toggleGrid(_ sender: Any) {
-    
+    pages[current].showGrid = !pages[current].showGrid
   }
 }

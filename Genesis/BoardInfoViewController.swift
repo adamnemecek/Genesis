@@ -18,11 +18,15 @@ class BoardInfoViewController: UIViewController {
   func addMessage(msg: String) {
     messages.append(msg)
     messageTable?.reloadData()
+    messageTable.scrollToRow(at: [0,messages.count-1], at: .bottom, animated: true)
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // look at the
+    //
+    NotificationCenter.default.addObserver(forName: InfoEventGeneric, object: nil, queue: OperationQueue.main){ (notif) in
+      self.addMessage(msg: notif.userInfo?["message"] as? String ?? "Bad Info Notification")
+    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -45,12 +49,16 @@ class BoardInfoViewController: UIViewController {
 
 extension BoardInfoViewController: UITableViewDataSource{
   
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return messages.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let text = messages[indexPath[0]]
+    let text = messages[indexPath[1]]
     if let cell = tableView.dequeueReusableCell(withIdentifier: cacheId), let label = cell.textLabel {
       label.text = text
       return cell
