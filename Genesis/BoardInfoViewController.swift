@@ -22,6 +22,7 @@ class BoardInfoViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    // look at the
   }
   
   override func didReceiveMemoryWarning() {
@@ -39,7 +40,7 @@ class BoardInfoViewController: UIViewController {
    // Pass the selected object to the new view controller.
    }
    */
-  
+
 }
 
 extension BoardInfoViewController: UITableViewDataSource{

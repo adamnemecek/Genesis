@@ -12,6 +12,8 @@ import UIKit
 class BoardView: UIView {
 
   var pages = [BoardPageView]()
+  var current = 0
+  var pageFormat = A4
   
   let device = MTLCreateSystemDefaultDevice()
 
@@ -33,25 +35,32 @@ class BoardView: UIView {
     pages[0].frame = layoutPage(pos: 0, nbPages: 1)
   }
 
-  /// For now just 0ne page
+  /// For now just one page
   ///
   /// - Parameters:
   ///   - pos: position of the pages in the book
   ///   - nbPages: number of pages in the book
   func layoutPage(pos: Int, nbPages: Int) -> CGRect {
+    let scale: CGFloat = 1.00
+    let safeframe = UIEdgeInsetsInsetRect(bounds, safeAreaInsets)
     func center(width: CGFloat, height: CGFloat) -> CGRect {
-      let left = (frame.width - width) / 2.0
-      let bottom = (frame.height - height) / 2.0
+      let left = safeframe.origin.x + (safeframe.width - width) / 2.0
+      let bottom = safeframe.origin.y + (safeframe.height - height) / 2.0
       return CGRect(x: left, y: bottom, width: width, height: height)
     }
-    if frame.width > frame.height {
-      let height = frame.height * 0.95
-      let width = height * 21 / 29.7
-      return center(width: width, height: height)
-    } else {
-      let height = frame.height * 0.95
-      let width = height * 21 / 29.7
+    if safeframe.width > safeframe.height {
+      let height = safeframe.height * scale
+      let width = (height * pageFormat.width) / pageFormat.height
       return center(width: width, height: height)
     }
+    else {
+      let height = safeframe.height * scale
+      let width = height * pageFormat.width / pageFormat.height
+      return center(width: width, height: height)
+    }
+  }
+
+  @IBAction func toggleGrid(_ sender: Any) {
+    
   }
 }
